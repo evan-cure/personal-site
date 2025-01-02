@@ -1,0 +1,39 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.main-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Inter' sans-serif;
+    height: 90%;
+    width: 100%;
+    align-self: center;
+    position: relative;
+
+    
+}
+.main-logo {
+    width: 500px;
+    height: 350px;
+    background-image: url(images/main-logo.svg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+
+    
+}
+.main-logo:hover {
+    background-image: url(images/main-logo-clear.svg);
+}
+.redirect {
+    font-family: Inter sans-serif;
+    font-size: 20px;
+    margin: 0.2%;
+}
+.redirect:hover {
+    text-decoration: underline;
+    font-family: Inter sans-serif;
+}
