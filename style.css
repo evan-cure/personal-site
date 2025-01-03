@@ -16,6 +16,7 @@ a {
     width: 100%;
     align-self: center;
     position: relative;
+    
 
     
 }
@@ -41,3 +42,66 @@ a {
     text-decoration: underline;
     font-family: Inter sans-serif;
 }
+.lilguy {
+    
+    height: 40%;
+    width: 100%;
+    align-self: center;
+    align-items: baseline;
+    outline: auto;
+    
+    
+}
+.marquee-text {
+    overflow: clip;
+  }
+  
+  .marquee-text-track {
+    border: 1px solid black;
+    display: flex;
+    width: max-content;
+    animation: marquee-move-text 10s linear infinite;
+    align-items: center;
+    padding-left: 1%;
+    gap: 1%;
+    white-space: nowrap;
+    
+      
+  }
+  .marquee-text-track:hover {
+    animation-play-state: paused
+  }
+
+  
+  .marquee-text p {
+    padding: 1rem 2.5rem;
+    justify-content: center;
+  }
+  .about-stack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Inter' sans-serif;
+    height: 90%;
+    width: 100%;
+    align-self: center;
+    position: relative;
+  }
+
+  .headshot-backdrop {
+    width: 23.75%;
+    height: 50%;
+    background-image: url(images/headshot-backdrop.svg);
+    background-size: contain;
+    background-position: center;
+    margin: 0;
+  }
+
+  
+  @keyframes marquee-move-text {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
