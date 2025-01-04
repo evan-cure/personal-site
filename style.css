@@ -53,30 +53,32 @@ a {
     
 }
 .marquee-text {
-    overflow: clip;
-  }
-  
-  .marquee-text-track {
-    border: 1px solid black;
-    display: flex;
-    width: max-content;
-    animation: marquee-move-text 10s linear infinite;
-    align-items: center;
-    padding-left: 1%;
-    gap: 1%;
-    white-space: nowrap;
-    
-      
-  }
-  .marquee-text-track:hover {
-    animation-play-state: paused
-  }
+  overflow: clip;
+}
 
-  
-  .marquee-text p {
-    padding: 1rem 2.5rem;
-    justify-content: center;
+.marquee-text-track {
+  display: flex;
+  padding-left: 4.8rem;
+  gap: 4.8rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 10s) linear infinite var(
+      --direction,
+      forwards
+    );
+}
+
+.marquee-text p {
+  border: 1px solid white;
+  background-color: #141414;
+  border-radius: 999px;
+  padding: 1rem 2.5rem;
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
   }
+}
   .about-stack {
     display: flex;
     align-items: center;
@@ -93,9 +95,17 @@ a {
     width: 23.75%;
     height: 50%;
     background-image: url(images/headshot-backdrop.svg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
+    align-items: center;
+    justify-content: center;
     margin: 0;
+    margin-top: -10%;
+    display: flex;
+  }
+  .headshot {
+    position: absolute;
+    width: min-content;
   }
 
   
