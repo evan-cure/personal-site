@@ -33,7 +33,7 @@ a {
 .main-logo:hover {
     background-image: url(images/main-logo-clear.svg);
 }
-.redirect {
+.main-stack .redirect {
     font-family: Inter sans-serif;
     font-size: 20px;
     margin: 0.2%;
@@ -66,12 +66,15 @@ a {
       forwards
     );
 }
+.marquee-text-track:hover {
+  animation-play-state: paused;
+}
 
 .marquee-text p {
   border: 1px solid white;
-  background-color: #141414;
   border-radius: 999px;
   padding: 1rem 2.5rem;
+  
 }
 
 @keyframes marquee-move-text {
