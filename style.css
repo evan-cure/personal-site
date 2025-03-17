@@ -88,10 +88,11 @@ a {
     justify-content: center;
     flex-direction: column;
     font-family: 'Inter' sans-serif;
-    height: 90%;
+    height: 100vh;  /* Use viewport height */
     width: 100%;
-    align-self: center;
-    position: relative;
+    position: relative;  /* Change to relative positioning */
+    margin: 0;
+    padding: 0;
   }
 
   .headshot-backdrop {
@@ -102,19 +103,145 @@ a {
     background-position: center;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    margin-top: -10%;
+    margin: 0 auto;  /* Center horizontally */
     display: flex;
+    position: relative;  /* Change to relative positioning */
   }
   .headshot {
-    position: absolute;
+    position: relative;  /* Change to relative positioning */
     width: min-content;
+    margin: 0 auto;  /* Center horizontally */
+  }
+  .about-blurb {
+    width: 50%;
+    margin: 2rem auto 0;  /* Add space above and center horizontally */
+    font-size: 20px;
+    font-family: 'Inter' sans-serif;
+    text-align: center;
   }
 
+.headshot-container {
+    position: relative;
+    width: 400px;  /* Set a specific width */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.headshot {
+    position: absolute;
+    width: 120%;  /* Slightly smaller than backdrop */
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
   
   @keyframes marquee-move-text {
     to {
       transform: translateX(-50%);
     }
   }
+
+  .projects body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+.projects-header {
+    position: relative;
+    height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects-header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.character {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+.character:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 35px;
+    width: 30px;
+    height: 40px;
+    background-color: green;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.projects-container {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+.project-card {
+    width: 400px;
+    border-radius: 50px;
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Add smooth transition */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.project-card img {
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+.project-card:hover img {
+    transform: scale(1.1); /* Makes only the image 10% bigger on hover */
+}
+
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    text-decoration: none;  /* Remove underline from link */
+    color: black;          /* Set text color */
+    display: block;        /* Ensure it's visible as a block element */
+    z-index: 1000;        /* Make sure it appears above other elements */
+}
+
+.back-button:hover {
+    transform: scale(1.05);
+}
 
