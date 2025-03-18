@@ -4,19 +4,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const arrowText = backButton.querySelector('.image-text');
     let hasScrolled = false;
     
+    // Add click handler for the button
+    backButton.addEventListener('click', function(e) {
+        if (window.scrollY === 0) {
+            e.preventDefault();
+            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+    
     window.addEventListener('scroll', function() {
         const mainBottom = mainContent.getBoundingClientRect().bottom;
         const scrollPosition = window.scrollY;
         
-        // Move to right on first scroll
-        if ( scrollPosition > 0) {
-            hasScrolled = true;
-            backButton.classList.add('scrolled');
+        // Move to right on first scroll and stay there
+        if (scrollPosition > 0) {
+            if (!hasScrolled) {
+                hasScrolled = true;
+                backButton.classList.add('scrolled');
+            }
+        } else {
+            // Only return to center when at very top
+            backButton.classList.remove('scrolled');
+            hasScrolled = false;
         }
         
-        // Return to center at top
+        // Update arrow direction
         if (scrollPosition === 0) {
-            backButton.classList.remove('scrolled');
             arrowText.textContent = '↓';
         } else if (mainBottom < 0) {
             arrowText.textContent = '↑';
