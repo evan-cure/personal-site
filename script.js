@@ -10,4 +10,22 @@ document.addEventListener('DOMContentLoaded', function() {
         backButton.textContent = '↓';
       }
     });
+  
+    const contactText1 = document.getElementById('contact-text1');
+    const contactText2 = document.getElementById('contact-text2');
+    let isEmail1 = false;
+    let isEmail2 = false;
+    
+    contactText1.addEventListener('click', function() {
+      if (!isEmail1) {
+        contactText1.textContent = 'ev.cureton@gmail.com';
+        isEmail1 = true;
+      }
+    });
+    contactText2.addEventListener('click', function() {
+        if (!isEmail2) {
+          contactText2.textContent = 'ev.cureton@gmail.com';
+          isEmail2 = true;
+        }
+      });
   });
