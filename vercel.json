@@ -1,11 +1,10 @@
 {
-    "cleanUrls": true,
-    "trailingSlash": false,
-    "routes": [
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
     { "src": "/", "dest": "/index.html" },
-    { "src": "/home", "dest": "/index.html" }
+    { "src": "/home", "dest": "/index.html" },
+    { "src": "/misc", "dest": "/misc.html" }
   ]
-    
-    
 }
-  
