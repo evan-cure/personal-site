@@ -331,7 +331,7 @@ html {
     object-fit: cover; /* Maintains aspect ratio while covering container */
     border-radius: 20px;
     transition: transform 0.3s ease;
-    border:  grey 5px solid;
+    border:  #216417 5px solid;
 }
 .project-card:hover {
     transform: scale(1.1); /* Makes only the image 10% bigger on hover */
