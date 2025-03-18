@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 /* general stuff */
 html, body {
     width: 100%;
@@ -20,6 +22,8 @@ body {
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 200px 200px, 150px 150px;
     min-height: 100vh;
     animation: twinkling 20s linear infinite;
+    overflow-anchor: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 @keyframes twinkling {
     from {
@@ -30,13 +34,19 @@ body {
     }
 }
 
+html {
+    overflow-x: hidden;
+    scroll-padding-top: 20px;  /* Add padding for anchor links */
+    scroll-behavior: smooth;  /* Add this line */
+}
+
 /* index styles */
 .main-stack {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    font-family: 'Inter' sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     height: 90%;
     width: 100%;
     align-self: center;
@@ -44,6 +54,9 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 100vh;  
+    padding-top: 0;  
+    margin-top: -40px;;   
 }
 .main-logo {
     width: 500px;
@@ -53,6 +66,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
+    margin-top: -100px;  /* Increase negative margin to move logo higher */
     transition: background-image 0.3s ease;
     transition: scale 0.3s ease;
 }
@@ -61,13 +75,13 @@ body {
     scale: 1.05;
 }
 .main-stack .redirect {
-    font-family: Inter sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 20px;
     margin: 0.2%;
 }
 .redirect:hover {
     text-decoration: underline;
-    font-family: Inter sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .marquee-text {
@@ -99,8 +113,9 @@ body {
     }
 }
 
-.index-star {
-    position: absolute;
+/* Remove or comment out .index-star styles */
+/* .index-star {
+    position: fixed;
     bottom: 20px;
     right: 10px;
     z-index: 1000;
@@ -110,7 +125,48 @@ body {
 .index-star img {
     width: 100px;
     height: auto;
+} */
+
+/* Add this where the index-star CSS was */
+.index-back {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: fit-content;
 }
+
+.index-back a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #C56D07;
+}
+
+.index-back img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.index-back img:hover {
+    opacity: 1;
+}
+
+.index-back .image-text {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.index-back:hover img,
+.index-back:hover .image-text {
+    opacity: 1;
+}
+
 /* about page styles*/
 .about-stack {
     display: flex;
@@ -320,6 +376,75 @@ body {
     transform: scale(1.05);
     transition: all 0.2s ease;
 }
+
+.section-divider {
+    height: 20px;  /* Reduced from 50px */
+    width: 100%;
+}
+
+.about-section, .projects-section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;  /* Reduced from 50px */
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    color: #C56D07;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;  
+    font-family: 'Inter', sans-serif;
+    opacity: 0.9;
+}
+
+/* Update existing navigation links */
+.redirect.about a, .redirect.projects a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.redirect.about a[href="about.html"] {
+    href: "#about"
+}
+
+.redirect.projects a[href="projects.html"] {
+    href: "#projects"
+}
+
+.redirect a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.redirect a:hover {
+    transform: translateY(-2px);
+}
+
+.redirect a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #C56D07;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.redirect a:hover::after {
+    transform: scaleX(1);
+}
+
+
 
 /* Responsiveness stuff*/
 
