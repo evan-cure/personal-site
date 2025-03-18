@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>evancureton</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="images/Star 1.svg">
   <link href="style.css" rel="stylesheet"> 
+  <script src="script.js">
+  </script>
 </head>
 <body class="starry-background">
   <div class="marquee-text">
@@ -21,14 +26,79 @@
       <p class="redirect "><a href="https://www.linkedin.com/in/evan-cureton/">CHECKOUT MY LINKEDIN!</a></p>
     </div>
   </div>
-  <div class="main-stack">
+  <div class="main-stack" id="top">
     <div class="main-logo"></div>
-    <div class="redirect projects"><a href="projects.html">Projects</a></div>
-    <div class="redirect about"><a href="about.html">About</a></div>
+    <div class="redirect projects"><a href="#projects">Projects</a></div>
+    <div class="redirect about"><a href="#about">About</a></div>
     <div class="redirect misc"><a href="misc.html">Misc</a></div>
   </div>
-  <div class="index-star">
-    <img src="images/Star 1.svg">
+  <div class="index-back">
+    <a href="#top">
+        <img src="images/Star 1.svg" alt="Navigation">
+        <span class="image-text">↓</span>
+    </a>
   </div>
+
+  <!-- About Section -->
+  <div class="section-divider"></div>
+  <section id="about" class="about-section">
+    
+    <div class="about-stack">
+      <h1 class="section-title">About</h1>
+      <div class="headshot-container">
+        <img class="backdrop" src="images/headshot-backdrop.svg" alt="Backdrop">
+        <img class="headshot" src="images/headshot-no-bg.svg" alt="Headshot">
+      </div>
+      <p class="about-blurb">My name is Evan. I am an honours computer science student at McGill
+         University, oringally from Toronto. I love basketball (go raps!), music, and cooking.</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <div class="section-divider"></div>
+  <section id="projects" class="projects-section">
+    <h1 class="section-title">Projects</h1>
+    <div class="projects-container">
+      <div class="project-card">
+        <h2>Super Resolution</h2>
+        <a href="https://colab.research.google.com/drive/1twpmFSHA_nZ9FrxE3deNwjqXmU3-8Ji4?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <img src="images/superres.jpg" alt="Super Resolution">
+        </a>
+        <p>Machine learning project on an image denoising/super-resolution app, trained on the CelebA dataset. 
+            Utilized an auto-encoder archtiecture in PyTorch.</p>
+        <div class="skills">
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">NumPy</span>
+        </div>
+    </div>
+    <div class="project-card">
+        <h2>Gesture Recognition</h2>
+        <a href="https://github.com/evan-cure/Gesture_Recognition" target="_blank" rel="noopener noreferrer">
+            <img src="images/gesture_recognition.png" alt="Gesture Recognition">
+        </a>
+        <p>Used Google's media pipe to create the backend of an app that detects a hand, 
+            gestures made by the hand, and the distance between hand. </p>
+        <div class="skills">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">MediaPipe</span>
+            <span class="skill-tag">OpenCV</span>
+        </div>
+    </div>
+    <div class="project-card">
+        <h2>evancureton.com</h2>
+        <a href="index.html">
+            <img src="images/personalsite.png" alt="Personal Site">
+        </a>
+        <p>An HTML/CSS website to showcase some projects and mess around. 
+            I plan on expanding the wesbite with react.</p>
+        <div class="skills">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+        </div>
+    </div>
+    </div>
+  </section>
 </body>
 </html>
