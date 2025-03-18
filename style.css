@@ -131,9 +131,17 @@ html {
 .index-back {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     width: fit-content;
+    transition: all 0.8s ease; /* Slower transition */
+}
+
+.index-back.scrolled {
+    left: auto;
+    right: 20px;
+    transform: none;
 }
 
 .index-back a {
