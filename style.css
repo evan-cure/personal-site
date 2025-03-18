@@ -454,6 +454,20 @@ html {
     opacity: 0.8;
 }
 
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #C56D07;
+    opacity: 0.8;
+    font-family: 'Inter', sans-serif;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 /* Responsiveness stuff*/
 
 /* Media queries for smaller screens */
@@ -498,6 +512,10 @@ html {
     .main-logo {
         width: 250px;
         height: 250px;
+    }
+    .footer {
+        padding: 15px;
+        margin-top: 20px;
     }
 }
 
