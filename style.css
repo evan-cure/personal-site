@@ -113,19 +113,7 @@ html {
     }
 }
 
-/* Remove or comment out .index-star styles */
-/* .index-star {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    z-index: 1000;
-    padding: 0;
-    margin: 0;
-}
-.index-star img {
-    width: 100px;
-    height: auto;
-} */
+
 
 /* Add this where the index-star CSS was */
 .index-back {
@@ -135,7 +123,7 @@ html {
     transform: translateX(-50%);
     z-index: 1000;
     width: fit-content;
-    transition: all 0.8s ease; /* Slower transition */
+    transition: all 0.8s ease; 
     animation: bounce 2s infinite;
 }
 
@@ -196,9 +184,9 @@ html {
     justify-content: center;
     flex-direction: column;
     font-family: 'Inter' sans-serif;
-    height: 100vh; /* Use viewport height */
+    height: 100vh; 
     width: 100%;
-    position: relative; /* Change to relative positioning */
+    position: relative; 
     margin: 0;
     padding: 20px;
     max-width: 1200px;
@@ -212,14 +200,14 @@ html {
     background-position: center;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto; 
     display: flex;
-    position: relative; /* Change to relative positioning */
+    position: relative; 
 }
 .headshot {
-    position: relative; /* Change to relative positioning */
+    position: relative; 
     width: min-content;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto; 
 }
 .about-blurb {
     width: 90%;
@@ -293,7 +281,7 @@ html {
     margin: 0 auto;
 }
 .project-card {
-    width: calc(30% - 40px); /* Subtracting gap and padding */
+    width: calc(30% - 40px); 
     min-width: 300px;
     border-radius: 10px;
     background-color: lightgrey;
@@ -324,15 +312,21 @@ html {
     border-radius: 5px;
     padding: 8px;
     margin-top: 15px;
+    font-family: 'Inter', sans-serif;
 }
 .project-card img {
     width: 100%;
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Maintains aspect ratio while covering container */
+    height: 200px; 
+    object-fit: cover; 
     border-radius: 20px;
     transition: transform 0.3s ease;
     border:  #216417 5px solid;
+    opacity: 0.9;
 }
+.project-card img:hover {
+    opacity: 1;
+}
+
 .project-card:hover {
     transform: scale(1.1); /* Makes only the image 10% bigger on hover */
 }
